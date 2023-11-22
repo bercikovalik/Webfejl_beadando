@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kovalik-Deák Bercel">
+    <meta name="copyright" content="TechVibe Solutions">
+    <link rel="icon" type="image/png" href="Képek/favicon.png">
+    <title>TechVibe Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            color: white;
+            scroll-behavior: smooth;
+            position: relative;
+            height: auto;
+            margin: 0;
+            overflow: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* Enable scrolling if content overflows */
+
+        }
+
+        .header-top {
+            position: relative;
+            z-index: 2;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+
+        }
+
+        #background-video {
+            width: 100vw;
+
+            height: 100vh;
+
+            object-fit: cover;
+
+        }
+
+        .content {
+            padding-top: 60px;
+            /* Space at the top */
+            padding-bottom: 90px;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: left;
+        }
+
+
+        .typewriter-box {
+            background-color: rgba(95, 104, 151, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border: 0.3px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            width: 50%;
+            /* Fixed width */
+            max-width: 95%;
+            /* Ensures responsiveness */
+            overflow: hidden;
+            /* Hide overflowed content */
+            word-wrap: break-word;
+            margin: auto;
+
+        }
+
+        .typewriter-box form,
+        .typewriter-box form>* {
+            width: 100%;
+            /* Ensure the form and its children take full width */
+        }
+
+        .typewriter-box form input,
+        .typewriter-box form select,
+        .typewriter-box form button {
+            /* Add specific styles for form elements if necessary */
+            margin-top: 10px;
+            padding: 10px;
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .typewriter-box form #budget {
+            -webkit-appearance: none;
+            /* Override default appearance for WebKit browsers */
+            appearance: none;
+            width: 70%;
+            /* Adjust width as needed */
+            height: 2px;
+            /* Adjust height */
+            background: #ddd;
+            /* Background color of the slider */
+            outline: none;
+            opacity: 0.7;
+            /* Partial transparency */
+            -webkit-transition: .2s;
+            /* Transition effect */
+            transition: opacity .2s;
+            margin-top: 10
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        h1 {
+            margin-top: 20%;
+            /* Adjust as needed */
+        }
+
+        .typewriter-box label {
+            display: block;
+            margin-top: 20px;
+            /* Increase the gap between the text and the label */
+            color: aquamarine;
+            /* Set the label color */
+        }
+
+        .typewriter-box input[type="email"],
+        .typewriter-box input[type="text"] {
+            width: 50%;
+            /* Make input field wider */
+            padding: 10px;
+            /* Add padding inside the input field */
+            margin-top: 10px;
+            /* Add gap above the input field */
+            background-color: transparent;
+            /* Make input field background transparent */
+            border: 0.5px solid white;
+            /* Add border to the input field */
+            color: white;
+            /* Set text color in the input field */
+            border-radius: 5px;
+            /* Optionally round the corners of the input field */
+        }
+
+        .typewriter-box button {
+            display: flex;
+            margin-top: 20px;
+            /* Increase the gap between the button and the input field */
+            padding: 10px 10px;
+            /* Add padding inside the button */
+            text-align: center;
+            justify-content: center;
+            background-color: transparent;
+            /* Make button background transparent */
+            border: 0.5px solid white;
+            /* Add border to the button */
+            color: white;
+            /* Set the button text color */
+            border-radius: 15px;
+            /* Make the button corners rounded */
+            cursor: pointer;
+            /* Change cursor to pointer when hovering over the button */
+            font-size: 16px;
+            /* Increase font size for the button text */
+        }
+
+        .typewriter-box button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Slight background color on hover for better UX */
+        }
+
+        .typewriter-box select {
+            width: 100%;
+            /* Match width of input fields */
+            padding: 10px;
+            /* Padding for consistency */
+            margin-top: 10px;
+            /* Space above the dropdown */
+            background-color: transparent;
+            /* Transparent background */
+            border: 0.5px solid white;
+            /* White border */
+            color: white;
+            /* Text color */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        .contact-form {
+            display: none;
+        }
+
+        .bodyall {
+            position: relative;
+            z-index: 1;
+            /* Ensures content is above the background */
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            margin: 0 auto;
+            padding: 10px 0;
+            position: relative;
+            /* Needed for z-index to take effect */
+            z-index: 2;
+            /* Higher z-index to ensure it's above the video */
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            /* Prevents wrapping */
+        }
+
+        .home-page {
+            font-size: 20pt;
+            margin-right: 10px;
+            /* Space between "HOME PAGE" and the box */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20pt;
+            border: 1.5px solid #068FFF;
+            border-radius: 5px;
+        }
+
+        .company-name {
+            font-size: 20pt;
+            text-align: right;
+            white-space: nowrap;
+            /* Prevents wrapping */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            color: white;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+            position: fixed;
+            margin-top: auto;
+        }
+
+        .footer-left a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            /* Space between navigation links */
+        }
+
+        .footer-left a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right p {
+            margin: 0;
+            /* Removes default paragraph margins */
+        }
+
+        /* ... [Previous CSS code] ... */
+
+        #budget-form {
+            /* Styling similar to the contact form */
+            display: inline-block;
+            width: 50%;
+            max-width: 100%;
+            overflow: hidden;
+            word-wrap: break-word;
+            margin-top: 20px;
+        }
+
+        #budget {
+            -webkit-appearance: none;
+            /* Override default appearance */
+            appearance: none;
+            width: 70%;
+            /* Full width of the container */
+            height: 5px;
+            /* Height of the slider */
+            background: #ddd;
+            /* Background color */
+            outline: none;
+            /* Remove the outline */
+            opacity: 0.7;
+            /* Partial transparency */
+            -webkit-transition: .2s;
+            /* Smooth transitions */
+            transition: opacity .2s;
+            margin-top: 10px;
+            /* Top margin */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        #budget:hover {
+            opacity: 1;
+            /* Fully opaque on hover */
+        }
+
+        #budget::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            /* Override default appearance */
+            appearance: none;
+            width: 15px;
+            /* Width of the thumb */
+            height: 15px;
+            /* Height of the thumb */
+            background: #068FFF;
+            /* Background color of the thumb */
+            cursor: pointer;
+            /* Cursor changes to pointer when hovered */
+            border-radius: 50%;
+            /* Circular shape */
+        }
+
+        #budget::-moz-range-thumb {
+            width: 25px;
+            /* Width of the thumb */
+            height: 25px;
+            /* Height of the thumb */
+            background: #068FFF;
+            /* Background color of the thumb */
+            cursor: pointer;
+            /* Cursor changes to pointer when hovered */
+            border-radius: 50%;
+            /* Circular shape */
+        }
+
+        #budget-value {
+            color: aquamarine;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .typewriter-box input[type="date"] {
+            width: 50%;
+            /* Adjust width as needed */
+            padding: 10px;
+            /* Add padding inside the input field */
+            margin-top: 10px;
+            /* Space above the input field */
+            background-color: transparent;
+            /* Make input field background transparent */
+            border: 0.5px solid white;
+            /* Add border to the input field */
+            color: white;
+            /* Set text color in the input field */
+            border-radius: 5px;
+            /* Optionally round the corners of the input field */
+            -webkit-appearance: none;
+            /* Remove default styling for WebKit browsers */
+            appearance: none;
+        }
+
+        /* Additional styles to target inner parts of the date picker in WebKit browsers */
+        .typewriter-box input[type="date"]::-webkit-inner-spin-button,
+        .typewriter-box input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            /* Hide the default inner parts */
+            -webkit-appearance: none;
+        }
+
+        /* Styles for focus state */
+        .typewriter-box input[type="date"]:focus {
+            outline: none;
+            /* Remove the outline */
+            border-color: #068FFF;
+            /* Highlight color for the border */
+        }
+
+        .typewriter-box input[type="radio"] {
+            margin-top: 10px;
+        }
+
+        .typewriter-box label {
+            display: block;
+            margin-top: 20px;
+            color: aquamarine;
+        }
+
+        .typewriter-box input[type="tel"] {
+            width: 50%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: transparent;
+            border: 0.5px solid white;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .typewriter-box .checkbox-option {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .typewriter-box input[type="checkbox"] {
+            margin-right: 10px;
+            width: 15px;
+            /* Adjust if necessary */
+            height: 15px;
+            /* Adjust if necessary */
+        }
+
+        .typewriter-box label {
+            color: aquamarine;
+        }
+
+
+
+        /* For very small screens (min-width: 300px) */
+        @media (min-width: 300px) {
+            .typewriter-box {
+                width: 90%;
+                /* Adjust width for smaller screens */
+                justify-content: center;
+                align-items: center;
+            }
+
+            .typewriter-box input[type="email"],
+            .typewriter-box input[type="text"],
+            .typewriter-box select {
+                width: 70%;
+                /* Full width for smaller inputs */
+            }
+
+            .typewriter-box button {
+                width: 50%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                /* Full width for button */
+            }
+
+            .footer-right {
+                display: none;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .typewriter-box {
+                width: 80%;
+                /* Full width for very small screens */
+                /* Adjust other styles if needed */
+            }
+
+            .content {
+                padding-top: 200px;
+                /* More space at the top for smaller screens */
+                padding-bottom: 200px;
+                /* More space at the bottom for smaller screens */
+            }
+
+            .header-top {
+                flex-direction: column;
+
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                font-size: 100vw;
+                /* Center-align text */
+            }
+
+            .left-section,
+            .company-name {
+                width: 100%;
+
+            }
+        }
+
+
+        @media (min-width: 600px) {
+            .typewriter-box {
+                width: 70%;
+
+            }
+
+            .typewriter-box button {
+                width: 25vw;
+            }
+        }
+
+
+        @media (min-width: 768px) {
+            .typewriter-box {
+                width: 50%;
+
+            }
+
+            .typewriter-box button {
+                width: 30%;
+            }
+
+            .footer-right {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body class="bodyall">
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="Képek/background_video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <header>
+        <div class="header-top">
+            <div class="left-section">
+                <div class="home-page">CONTACT US</div>
+                <div class="box">5</div>
+            </div>
+            <div class="company-name">TECHVIBE SOLUTIONS</div>
+        </div>
+    </header>
+    <div class="content">
+        <div id="typewriter-box" class="typewriter-box">
+            <form method="get" action="http://szamtud.uni-corvinus.hu/receive.php">
+                <span id="typewriter-text"></span>
+
+                <div id="contact-form" class="contact-form">
+                    <label for="email">Enter your email:</label>
+                    <input type="email" id="email" name="email">
+                    <button onclick="showNextField('email', 'name')">Continue</button>
+                </div>
+
+                <div id="name-field" style="display:none;">
+                    <span id="email-text"></span>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <button onclick="showNextField('name', 'service')">Continue</button>
+                </div>
+
+                <div id="service-field" style="display:none;">
+                    <span id="name-text"></span>
+                    <label for="service">Service:</label>
+                    <select id="service" name="service" onchange="checkOtherService(this.value)">
+                        <option value="Software Development">Software Development</option>
+                        <option value="IT Consulting">IT Consulting</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div id="other-service" style="display:none;">
+                        <label for="other">Please Describe Shortly:</label>
+                        <input type="text" id="other" name="other" placeholder="Describe Service">
+                    </div>
+                    <button onclick="showNextField('service', 'budget')">Continue</button>
+                </div>
+
+                <div id="budget-field" style="display:none;">
+                    <label for="budget">Set Your Maximum Budget ($):</label>
+                    <input type="range" id="budget" name="budget" min="0" max="100000" value="50000" step="500"
+                        oninput="updateBudgetValue(this.value)">
+                    <span id="budget-value">50000</span>
+                    <button onclick="showNextField('budget', 'start-date')">Continue</button>
+                </div>
+
+                <div id="start-date-field" style="display:none;">
+                    <label for="start-date">Choose Start Date:</label>
+                    <input type="date" id="start-date" name="start-date">
+                    <button onclick="showNextField('start-date', 'contact-method')">Continue</button>
+                </div>
+
+                <div id="contact-method-field" style="display:none;">
+                    <label for="contact-method">Preferred Contact Method:</label>
+                    <input type="radio" id="contact-email" name="contact-method" value="email"
+                        onclick="togglePhoneInput(false)"> Email<br>
+                    <input type="radio" id="contact-text" name="contact-method" value="text"
+                        onclick="togglePhoneInput(true)"> Text<br>
+                    <div id="phone-number-input" style="display:none;">
+                        <label for="phone-number">Mobile Phone Number:</label>
+                        <input type="tel" id="phone-number" name="phone-number" placeholder="Enter mobile number">
+                    </div>
+                    <button onclick="showNextField('contact-method-field', 'checkbox')">Continue</button>
+                </div>
+
+                <div id="checkbox-field" style="display:none;">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="subscribe-newsletter" name="subscribe-newsletter">
+                        <label for="subscribe-newsletter">Subscribe to Newsletter</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="agree-terms" name="agree-terms" required>
+                        <label for="agree-terms">Agree to Terms and Conditions</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left">
+            <a href="../../../../main1felx.html">Home</a>
+            <a href="../../../aboutus.html">About Us</a>
+            <a href="../../services_new.html">Services</a>
+            <a href="contactus_new.html">Contact Us</a>
+        </div>
+        <div class="footer-right">
+            <p>Only for educational purposes.</p>
+            <p>Kovalik-Deák Bercel - 2023</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

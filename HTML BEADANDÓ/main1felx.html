@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kovalik-Deák Bercel">
+    <meta name="copyright" content="TechVibe Solutions">
+    <link rel="icon" type="image/png" href="Aboutus/Services/Portfolio/contactus/Képek/favicon.png">
+    <title>TechVibe Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'IBM Plex Mono', monospace;
+            color: white;
+            background-color: black;
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: black;
+            padding: 2px;
+        }
+
+        .header-top,
+        .header-middle,
+        .image-group,
+        .events {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 2;
+            width: 80%;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            /* Prevents wrapping */
+        }
+
+        .home-page {
+            font-size: 20pt;
+            margin-right: 10px;
+            /* Space between "HOME PAGE" and the box */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20pt;
+            border: 1.5px solid #068FFF;
+            border-radius: 5px;
+        }
+
+        .company-name {
+            font-size: 20pt;
+            text-align: right;
+            white-space: nowrap;
+            /* Prevents wrapping */
+        }
+
+        /* Logo and Company Info Styles */
+        .header-middle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allows wrapping */
+            margin-bottom: 10px;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 25%;
+            /* Adjust based on your design */
+            min-width: 100px;
+            /* Prevents the logo from becoming too small */
+
+        }
+
+        .company-info {
+            flex-grow: 1;
+            /* Allows this section to grow and fill space */
+            padding: 5px 5px 5px 5px;
+            /* Add some padding */
+            text-align: center;
+            max-width: 20%;
+            margin-right: 15%;
+        }
+
+        .company-title {
+            font-size: 30pt;
+        }
+
+        .slogan {
+            font-size: 15pt;
+            font-style: italic;
+            margin-top: 5%;
+        }
+
+        /* Image Group Styles */
+        .image-group {
+            width: 35%;
+            /* Adjust based on your design */
+            justify-content: flex-end;
+            display: flex;
+            gap: 55px;
+        }
+
+        .intro {
+            width: 100%;
+            /* Full width to occupy its own line */
+            text-align: center;
+            padding-top: 10px;
+            /* Spacing above the text */
+            padding-bottom: 30px;
+        }
+
+        /* Individual Images within Image Group */
+        .iroda,
+        .tech,
+        .office {
+            width: 100%;
+            /* Adjust based on your design */
+            max-width: 170px;
+            /* Prevents the images from becoming too large */
+            border-radius: 5px;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 15pt;
+        }
+
+        nav li {
+            margin-right: 10px;
+        }
+
+        nav a:link,
+        nav a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav li#current a {
+            background-color: #068FFF;
+            border-radius: 3px;
+        }
+
+        nav a:hover,
+        nav li#current a:hover {
+            color: #ffffff;
+            background-color: #001866;
+            border-radius: 3px;
+        }
+
+        /* Main Content Styles */
+        .containermain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .events {
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .plakatmain {
+            width: 300px;
+            margin: 20px;
+            opacity: 1;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .plakatcontainer:hover .plakatmain {
+            opacity: 0.3;
+        }
+
+        .plakatcontainer:hover {
+            opacity: 1;
+        }
+
+        /* Footer Styles */
+        footer p {
+            text-align: center;
+        }
+
+        /* Media Query for Very Small Screens (less than 430px) */
+        @media (min-width: 300px) {
+            .header-top {
+                flex-wrap: wrap;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center-align items */
+                padding: 5px 0;
+                /* Adjust padding */
+                margin: 0 0
+            }
+
+            .left-section,
+            .company-name {
+                width: 100%;
+                /* Full width for better readability */
+                text-align: center;
+                /* Center-align text */
+                margin-bottom: 5px;
+                /* Add some space below each section */
+            }
+
+            .home-page,
+            .company-name {
+                font-size: 14pt;
+                /* Adjust font size for smaller screens */
+            }
+
+            .box {
+                margin-top: 3px;
+                /* Adjust space above the box */
+            }
+
+            /* Header Middle Section */
+            .header-middle {
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                /* Center-align text for all child elements */
+                padding: 5px 0;
+                /* Adjust padding */
+            }
+
+            .logo {
+                width: 70%;
+                /* Adjust logo size */
+                max-width: 120px;
+                /* Ensure logo doesn't get too large */
+                margin-bottom: 10px;
+                /* Add space below the logo */
+            }
+
+            .company-info {
+                padding: 0 5px;
+                /* Adjust padding */
+                max-width: 100%;
+                /* Full width for company info */
+                margin-bottom: 5px;
+                /* Add space below company info */
+                text-align: center;
+                /* Center-align the text */
+                align-items: center;
+                /* Center-align flex items */
+                justify-content: center;
+            }
+
+            .company-title,
+            .slogan {
+                font-size: 16pt;
+                width: 100%;
+                /* Adjust font size for readability */
+            }
+
+            .image-group {
+                flex-direction: column;
+                /* Stack images vertically */
+                justify-content: center;
+                /* Center images */
+                margin-top: 10px;
+                /* Space above the image group */
+            }
+
+            .iroda,
+            .tech,
+            .office {
+                max-width: 110px;
+                /* Adjust max-width for images */
+                margin: 4px auto;
+                /* Center images with margin */
+            }
+
+            .intro {
+                font-size: 12pt;
+                /* Adjust font size for intro text */
+                padding: 0 5px;
+                /* Horizontal padding for the text */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin: 10px auto;
+            }
+
+            nav li {
+                margin-bottom: 5px;
+            }
+
+            .events {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .plakatmain {
+                width: 80%;
+                margin: 10px auto;
+            }
+
+            /* Additional adjustments as needed */
+        }
+
+        @media screen and (max-width: 599px) {
+            .header-top {
+                flex-wrap: wrap;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center-align items */
+                padding: 5px 0;
+                /* Adjust padding */
+                margin: 0 0
+            }
+
+            .left-section,
+            .company-name {
+                width: 100%;
+                /* Full width for better readability */
+                text-align: center;
+                /* Center-align text */
+                margin-bottom: 5px;
+                /* Add some space below each section */
+            }
+
+            .home-page,
+            .company-name {
+                font-size: 14pt;
+                /* Adjust font size for smaller screens */
+            }
+
+            .box {
+                margin-top: 3px;
+                /* Adjust space above the box */
+            }
+
+            /* Header Middle Section */
+            .header-middle {
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                justify-content: center;
+                padding: 5px 0;
+                /* Adjust padding */
+            }
+
+            .logo {
+                width: 70%;
+                /* Adjust logo size */
+                max-width: 120px;
+                /* Ensure logo doesn't get too large */
+                margin-bottom: 10px;
+                /* Add space below the logo */
+            }
+
+            .company-info {
+                padding: 0 5px;
+                /* Adjust padding */
+                max-width: 100%;
+                /* Full width for company info */
+                margin-bottom: 5px;
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                justify-content: center;
+                margin-right: 0;
+                /* Add space below company info */
+            }
+
+            .company-title,
+            .slogan {
+                font-size: 16pt;
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                justify-content: center;
+                /* Adjust font size for readability */
+            }
+
+            .image-group {
+                flex-direction: column;
+                /* Stack images vertically */
+                justify-content: center;
+                /* Center images */
+                margin-top: 10px;
+                /* Space above the image group */
+            }
+
+            .iroda,
+            .tech,
+            .office {
+                max-width: 110px;
+                /* Adjust max-width for images */
+                margin: 4px auto;
+                /* Center images with margin */
+            }
+
+            .intro {
+                font-size: 12pt;
+                /* Adjust font size for intro text */
+                padding: 0 5px;
+                /* Horizontal padding for the text */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin: 10px auto;
+            }
+
+            nav li {
+                margin-bottom: 5px;
+            }
+
+            .events {
+                flex-direction: column;
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                justify-content: center;
+            }
+
+            .plakatmain {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+        /* Responsive Design */
+        @media (min-width: 600px) {
+            .header-top {
+                display: flex;
+                justify-content: space-between;
+                /* This will push the child elements to the edges */
+                align-items: center;
+                width: 95%;
+                margin: 0 auto;
+                padding: 10px 0;
+            }
+
+            .company-name {
+                margin-left: auto;
+                /* This pushes the .company-name to the right */
+                font-size: 20pt;
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            /* Rest of your CSS */
+
+
+            .left-section {
+                width: 100%;
+                /* Full width for better readability */
+                text-align: center;
+                margin-bottom: 5px;
+                /* Add some space below each section */
+            }
+
+            .home-page {
+                font-size: 16pt;
+                /* Adjust font size for smaller screens */
+            }
+
+            .box {
+                margin-top: 5px;
+                /* Add some space above the box */
+            }
+
+            .header-middle {
+                flex-direction: column;
+                /* Stack elements vertically */
+                align-items: center;
+                /* Center-align items */
+                text-align: center;
+                /* Center-align text for all child elements */
+            }
+
+            .logo {
+                width: 80%;
+                /* Adjust logo size for smaller screens */
+                max-width: 150px;
+                /* Ensure logo doesn't get too large */
+                margin-bottom: 10px;
+                /* Add some space below the logo */
+            }
+
+            .company-info {
+                max-width: 100%;
+                /* Allow company info to take full width */
+                margin: 0;
+                /* Remove any margin */
+                padding: 0 10px;
+                /* Add some horizontal padding */
+            }
+
+            .company-title,
+            .slogan {
+                font-size: 18pt;
+                /* Adjust font size for readability */
+            }
+
+            .image-group {
+                flex-direction: row;
+                /* Keep images in a row if there's enough space */
+                justify-content: space-around;
+                /* Space out images evenly */
+                flex-wrap: wrap;
+                /* Allow images to wrap to next line if needed */
+                width: 100%;
+                /* Full width to accommodate images */
+                margin-top: 10px;
+                /* Space above the image group */
+            }
+
+            .iroda,
+            .tech,
+            .office {
+                max-width: 120px;
+                /* Adjust the max-width for images */
+                margin: 5px;
+                /* Space around each image */
+            }
+
+            .intro {
+                margin-top: 10px;
+                /* Space above the intro text */
+                padding: 0 10px;
+                /* Horizontal padding for the text */
+                font-size: 14pt;
+                /* Adjust font size for intro text */
+            }
+
+            .containermain {
+                padding: 10px;
+                /* Adjust padding for smaller screens */
+                align-items: center;
+                /* Center-align the content */
+            }
+
+            /* Styles for the Events Section */
+            .events {
+                flex-direction: column;
+                /* Stack the event images vertically */
+                align-items: center;
+                /* Center-align the images */
+            }
+
+            .plakatmain {
+                width: 100%;
+                /* Full width for images */
+                margin: 10px 0;
+                /* Adjust margin around images */
+            }
+
+            /* Styles for Footer */
+            footer p {
+                text-align: center;
+                /* Center-align footer text */
+                font-size: 14pt;
+                /* Adjust font size for readability */
+                padding: 5px;
+                /* Add padding around footer text */
+            }
+
+        }
+
+        @media (min-width: 768px) {
+
+            .header-top {
+                display: flex;
+                justify-content: space-between;
+                /* This will push the child elements to the edges */
+                align-items: center;
+                width: 95%;
+                margin: 0 auto;
+                padding: 10px 0;
+            }
+
+            .company-name {
+                margin-left: auto;
+                /* This pushes the .company-name to the right */
+                font-size: 20pt;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            .left-section {
+                text-align: left;
+                /* Reset text alignment */
+            }
+
+            .header-middle {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                /* Allows elements to wrap to the next line */
+                width: 95%;
+                margin: 0 auto;
+            }
+
+            .logo {
+                flex: 1;
+                /* Adjust the flex basis as needed */
+                max-width: 150px;
+                /* Adjust size as needed */
+            }
+
+            .company-info {
+                flex: 2;
+                /* Adjust the flex basis as needed */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                /* Center the content */
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .image-group {
+                display: flex;
+                justify-content: space-between;
+                /* Adjust this to space-around or center based on your design */
+                align-items: center;
+                flex-wrap: nowrap;
+                /* Prevent the images from wrapping */
+                width: 80%;
+                /* Adjust the width as needed to fit all images in one row */
+            }
+
+            .iroda,
+            .tech,
+            .office {
+                flex: 0 0 auto;
+                /* Do not grow or shrink, and base size on content */
+                max-width: 170px;
+                /* Adjust max-width to ensure they fit in one row */
+                margin: 0 10px;
+                /* Add margin for spacing between images */
+            }
+
+            .intro {
+                width: 100%;
+                /* Full width */
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                /* Reset to horizontal nav */
+                justify-content: center;
+                padding: 0;
+            }
+
+            nav li {
+                margin-right: 10px;
+                /* Reset margin */
+            }
+
+            .events {
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                width: 95%;
+                gap: 30px;
+            }
+
+
+
+            /* Other elements reset as needed */
+        }
+
+
+
+        /* Background Image Style */
+        #hatter {
+            background-image: url("Aboutus/Services/Portfolio/contactus/Képek/scroll.jpg");
+            min-height: 250px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Title Styles */
+        .titlemain {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        hr {
+            border-color: #068FFF;
+            width: 99%
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containermain">
+        <header>
+            <div class="header-top">
+                <div class="left-section">
+                    <div class="home-page">HOME PAGE</div>
+                    <div class="box">1</div>
+                </div>
+                <div class="company-name">TECHVIBE SOLUTIONS</div>
+            </div>
+            <hr>
+            <div class="header-middle">
+                <img class="logo" src="Aboutus/Services/Portfolio/contactus/Képek/logó.png" alt="Logo">
+                <div class="company-info">
+                    <div class="company-title">TECHVIBE SOLUTIONS</div>
+                    <div class="slogan">Solutions that Sync, Technology that Sings</div>
+                </div>
+                <div class="image-group">
+                    <img class="iroda" src="Aboutus/Services/Portfolio/contactus/Képek/iroda.jpg" alt="iroda">
+                    <img class="tech" src="Aboutus/Services/Portfolio/contactus/Képek/kep2.jpg" alt="technológia">
+                    <img class="office" src="Aboutus/Services/Portfolio/contactus/Képek/office.jpg" alt="iroda">
+                </div>
+                <div class="intro">
+                    Welcome to TechVibe Solutions, your gateway to the future of technology. At TechVibe, we're
+                    passionate about transforming ideas into realities and helping businesses thrive in the digital
+                    realm. Explore the endless possibilities with us, where innovation meets excellence. Join the
+                    TechVibe experience and let your success resonate in the digital age.
+                </div>
+            </div>
+            <hr>
+            <nav>
+                <ul id="navlist">
+                    <li id="current"><a href="main1.html">HOME PAGE</a></li>
+                    <li><a href="Aboutus/aboutus.html">ABOUT US</a></li>
+                    <li><a href="Aboutus/Services/services_new.html">SERVICES</a></li>
+                    <li><a href="Aboutus/Services/Portfolio/contactus/contactus_new.html">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container" id="hatter"></div>
+    <div class="containermain">
+        <h1 class="titlemain">UPCOMING EVENTS</h1>
+        <h3 class="titlemain">Click for more information!</h3>
+        <div class="events">
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat1.png" alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat2.png" alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat3.png" alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat4.png" alt="poster"></a>
+        </div>
+        <footer>
+            <p>Only for educational purposes.</p>
+            <p>Kovalik-Deák Bercel - 2023</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+
+<!--Things to do: Events posters fade-->
