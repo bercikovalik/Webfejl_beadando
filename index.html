@@ -10,215 +10,9 @@
     <title>TechVibe Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="Aboutus/Services/Portfolio/contactus/style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles */
-        body {
-            font-family: 'IBM Plex Mono', monospace;
-            color: white;
-            background-color: black;
-            padding: 0;
-            margin: 0;
-            scroll-behavior: smooth;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: black;
-            padding: 2px;
-        }
-
-        .header-top,
-        .header-middle,
-        .image-group,
-        .events {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 2;
-            width: 80%;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 95%;
-            margin: 0 auto;
-            padding: 10px 0;
-        }
-
-        .left-section {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            /* Prevents wrapping */
-        }
-
-        .home-page {
-            font-size: 20pt;
-            margin-right: 10px;
-            /* Space between "HOME PAGE" and the box */
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .box {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            background-color: black;
-            color: white;
-            text-align: center;
-            line-height: 35px;
-            font-size: 20pt;
-            border: 1.5px solid #068FFF;
-            border-radius: 5px;
-        }
-
-        .company-name {
-            font-size: 20pt;
-            text-align: right;
-            white-space: nowrap;
-            /* Prevents wrapping */
-        }
-
-        /* Logo and Company Info Styles */
-        .header-middle {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            /* Allows wrapping */
-            margin-bottom: 10px;
-            width: 95%;
-            margin: 0 auto;
-        }
-
-        .logo {
-            width: 25%;
-            /* Adjust based on your design */
-            min-width: 100px;
-            /* Prevents the logo from becoming too small */
-
-        }
-
-        .company-info {
-            flex-grow: 1;
-            /* Allows this section to grow and fill space */
-            padding: 5px 5px 5px 5px;
-            /* Add some padding */
-            text-align: center;
-            max-width: 20%;
-            margin-right: 15%;
-        }
-
-        .company-title {
-            font-size: 30pt;
-        }
-
-        .slogan {
-            font-size: 15pt;
-            font-style: italic;
-            margin-top: 5%;
-        }
-
-        /* Image Group Styles */
-        .image-group {
-            width: 35%;
-            /* Adjust based on your design */
-            justify-content: flex-end;
-            display: flex;
-            gap: 55px;
-        }
-
-        .intro {
-            width: 100%;
-            /* Full width to occupy its own line */
-            text-align: center;
-            padding-top: 10px;
-            /* Spacing above the text */
-            padding-bottom: 30px;
-        }
-
-        /* Individual Images within Image Group */
-        .iroda,
-        .tech,
-        .office {
-            width: 100%;
-            /* Adjust based on your design */
-            max-width: 170px;
-            /* Prevents the images from becoming too large */
-            border-radius: 5px;
-        }
-
-        /* Navigation Styles */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            margin-bottom: 20px;
-            font-size: 15pt;
-        }
-
-        nav li {
-            margin-right: 10px;
-        }
-
-        nav a:link,
-        nav a:visited {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav li#current a {
-            background-color: #068FFF;
-            border-radius: 3px;
-        }
-
-        nav a:hover,
-        nav li#current a:hover {
-            color: #ffffff;
-            background-color: #001866;
-            border-radius: 3px;
-        }
-
-        /* Main Content Styles */
-        .containermain {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .events {
-            flex-wrap: nowrap;
-            justify-content: center;
-        }
-
-        .plakatmain {
-            width: 300px;
-            margin: 20px;
-            opacity: 1;
-            transition: .5s ease;
-            backface-visibility: hidden;
-        }
-
-        .plakatcontainer:hover .plakatmain {
-            opacity: 0.3;
-        }
-
-        .plakatcontainer:hover {
-            opacity: 1;
-        }
-
-        /* Footer Styles */
-        footer p {
-            text-align: center;
-        }
-
         /* Media Query for Very Small Screens (less than 430px) */
         @media (min-width: 300px) {
             .header-top {
@@ -713,37 +507,20 @@
                 gap: 30px;
             }
 
-
-
-            /* Other elements reset as needed */
         }
 
-
-
-        /* Background Image Style */
         #hatter {
-            background-image: url("/Aboutus/Services/Portfolio/contactus/Képek/scroll.jpg");
+            background-image: url("Aboutus/Services/Portfolio/contactus/Képek/scroll.jpg");
             min-height: 250px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-
-        /* Title Styles */
-        .titlemain {
-            flex-basis: 100%;
-            text-align: center;
-        }
-
-        hr {
-            border-color: #068FFF;
-            width: 99%
-        }
     </style>
 </head>
 
-<body>
+<body class="body_index">
     <div class="containermain">
         <header>
             <div class="header-top">
@@ -788,10 +565,14 @@
         <h1 class="titlemain">UPCOMING EVENTS</h1>
         <h3 class="titlemain">Click for more information!</h3>
         <div class="events">
-            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat1.png" alt="poster"></a>
-            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat2.png" alt="poster"></a>
-            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat3.png" alt="poster"></a>
-            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat4.png" alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat1.png"
+                    alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat2.png"
+                    alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat3.png"
+                    alt="poster"></a>
+            <a href="#"><img class="plakatmain" src="Aboutus/Services/Portfolio/contactus/Képek/plakat4.png"
+                    alt="poster"></a>
         </div>
         <footer>
             <p>Only for educational purposes.</p>
