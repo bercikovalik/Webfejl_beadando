@@ -2,14 +2,14 @@
 
 Készítő: Kovalik-Deák Bercel
 
-Url:
+Url: https://bercikovalik.github.io/Webfejl_beadando/index.html
 
 Leírás: Az oldal egy kitalált cég, a Tech Vibe Solutions, egy informatikai szolgáltatásokat kínáló cég oldala. Az oldal tartalmazza a cég bemutatkozását, a kínált szolgáltatások leírását, és a kapcsolatba lépést lehetővé tevő űrlap oldalt. 
 
 Js:
 1) Ez a JavaScript kódrészlet egy egyszerű "írógép effektust" valósít meg a Services oldalon, illetve a Contact us oldalon.
 
-2)	Ez a Javascript kód a menü megjelenítését vagy elrejtését váltogatja a Services oldalon.
+2) Ez a Javascript kód a menü megjelenítését vagy elrejtését váltogatja a Services oldalon.
 
 3) Ez a kód a Contact us oldal űrlapjának egyik mezőjének elrejtésére és egy másik mező megjelenítésére szolgál. Ez lehetővé teszi, hogy az űrlap interaktívabb legyen, például lépésenkénti kitöltést biztosítva, ahol minden lépésben csak az aktuális mező látható, a többi el van rejtve.
 
