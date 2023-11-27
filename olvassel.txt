@@ -9,7 +9,7 @@ Leírás: Az oldal egy kitalált cég, a Tech Vibe Solutions, egy informatikai s
 Js:
 1) Ez a JavaScript kódrészlet egy egyszerű "írógép effektust" valósít meg a Services oldalon, illetve a Contact us oldalon.
 
-2)	Ez a Javascript kód a menü megjelenítését vagy elrejtését váltogatja a Services oldalon.
+2) Ez a Javascript kód a menü megjelenítését vagy elrejtését váltogatja a Services oldalon.
 
 3) Ez a kód a Contact us oldal űrlapjának egyik mezőjének elrejtésére és egy másik mező megjelenítésére szolgál. Ez lehetővé teszi, hogy az űrlap interaktívabb legyen, például lépésenkénti kitöltést biztosítva, ahol minden lépésben csak az aktuális mező látható, a többi el van rejtve.
 
