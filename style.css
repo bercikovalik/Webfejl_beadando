@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 2;
+    margin: 2px;
     width: 80%;
 }
 
@@ -552,7 +552,7 @@ body.contactbody {
     -webkit-transition: .2s;
     /* Transition effect */
     transition: opacity .2s;
-    margin-top: 10
+    margin-top: 10px
 }
 .typewriter-box-contact label {
     display: block;
