@@ -2,7 +2,7 @@
 
 Készítő: Kovalik-Deák Bercel
 
-Url:
+Url: https://bercikovalik.github.io/Webfejl_beadando/index.html
 
 Leírás: Az oldal egy kitalált cég, a Tech Vibe Solutions, egy informatikai szolgáltatásokat kínáló cég oldala. Az oldal tartalmazza a cég bemutatkozását, a kínált szolgáltatások leírását, és a kapcsolatba lépést lehetővé tevő űrlap oldalt. 
 
