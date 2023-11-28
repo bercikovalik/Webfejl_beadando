@@ -439,7 +439,7 @@ footer.servicesfooter {
     /* Initially hidden */
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
-    padding-left: 20px;
+    padding-left: 5px;
 
     /* Space between icon and menu */
 }

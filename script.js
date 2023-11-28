@@ -1,3 +1,4 @@
+// 1 services //
 document.addEventListener('DOMContentLoaded', function () {
     const typewriterText = "OUR SERVICES";
     const typewriterElement = document.getElementById('typewriter-text-services');
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriter();
 });
-
+// 1 contact us //
 document.addEventListener('DOMContentLoaded', function () {
     const typewriterText = "Welcome to Tech Vibe Solutions! <br>Here you can get in touch with us.";
     const typewriterElement = document.getElementById('typewriter-text');
@@ -36,10 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
     typeWriter();
 });
 
+// 2 //
+
 function toggleMenu() {
     var menuBar = document.getElementById("menu-bar");
     menuBar.classList.toggle("menu-visible");
 }
+
+// 3 //
 
 function showNextField(currentFieldId, nextFieldId) {
     const currentInput = document.getElementById(currentFieldId);
@@ -65,6 +70,8 @@ function showNextField(currentFieldId, nextFieldId) {
     }
 }
 
+// 4 //
+
 function checkOtherService(value) {
     if (value === 'Other') {
         document.getElementById('other-service').style.display = 'block';
@@ -72,9 +79,15 @@ function checkOtherService(value) {
         document.getElementById('other-service').style.display = 'none';
     }
 }
+
+// 5 //
+
 function updateBudgetValue(value) {
     document.getElementById('budget-value').textContent = value;
 }
+
+// 6 //
+
 function togglePhoneInput(show) {
     var phoneNumberInput = document.getElementById("phone-number-input");
     if (show) {

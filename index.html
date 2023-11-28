@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
     <style>
+         @media (min-width: 300px) {
+            
+        }
         /* Media Query for Very Small Screens (less than 430px) */
-        @media (min-width: 300px) {
+        @media (max-width: 480px) {
             .header-top {
                 flex-wrap: wrap;
                 /* Stack elements vertically */
@@ -27,11 +30,12 @@
 
             .left-section,
             .company-name {
-                width: 100%;
+                
                 /* Full width for better readability */
                 text-align: center;
                 /* Center-align text */
                 margin-bottom: 5px;
+
                 /* Add some space below each section */
             }
 
@@ -137,7 +141,6 @@
 
             /* Additional adjustments as needed */
         }
-
         @media screen and (max-width: 599px) {
             .header-top {
                 flex-wrap: wrap;
@@ -151,7 +154,7 @@
 
             .left-section,
             .company-name {
-                width: 100%;
+                
                 /* Full width for better readability */
                 text-align: center;
                 /* Center-align text */
@@ -263,7 +266,7 @@
                 margin: 10px auto;
             }
         }
-
+        
         /* Responsive Design */
         @media (min-width: 600px) {
             .header-top {
