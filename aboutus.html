@@ -12,8 +12,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () { $('#images').galleria({ width: 1000, height: 500 }); });</script>
     <style>
-        /* Header Styles */
 
         #hatter {
             background-image: url("./Kepek/scroll.jpg");
@@ -248,18 +252,23 @@
             nav li {
                 margin-bottom: 5px;
             }
+
             .content_flex#item1 {
                 flex-direction: column;
             }
+
             .content_flex#item2 {
                 flex-direction: column-reverse;
             }
+
             .content_flex#item3 {
                 flex-direction: column;
             }
+
             .content_flex#item4 {
                 flex-direction: column-reverse;
             }
+
             .content_flex#item5 {
                 flex-direction: column;
             }
@@ -495,7 +504,20 @@
                 /* Adjust if needed for smaller screens */
             }
 
-            /* Other elements reset as needed */
+            /* Other elemen
+        ts reset as needed */
+        }
+
+        .galleria {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .galleria img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -618,6 +640,16 @@
             </div>
         </div>
     </div>
+    <article id="images" class="galleria">
+        <img src="Kepek/galeria1.jpg" alt="Teamwork" title="Teamwork">
+        <img src="Kepek/galeria2.jpg" alt="Meeting" title="Meeting">
+        <img src="Kepek/galeria3.jpg" alt="Our office" title="Our office">
+        <img src="Kepek/galeria4.jpg" alt="Award ceremony" title="Award ceremony">
+        <img src="Kepek/galeria5.jpg" alt="Meeting" title="Meeting">
+        <img src="Kepek/galeria6.jpg" alt="Programming" title="Programming">
+        <img src="Kepek/galeria7.jpg" alt="Coding" title="Coding">
+    </article>
+    <hr>
     <footer>
         <p>Only for educational purposes.</p>
         <p>Kovalik-Deák Bercel - 2023</p>
