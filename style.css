@@ -42,13 +42,11 @@ header {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    /* Prevents wrapping */
 }
 
 .home-page {
     font-size: 20pt;
     margin-right: 10px;
-    /* Space between "HOME PAGE" and the box */
 }
 
 * {
@@ -71,7 +69,6 @@ header {
     font-size: 20pt;
     text-align: right;
     white-space: nowrap;
-    /* Prevents wrapping */
 }
 
 /* Logo and Company Info Styles */
@@ -80,7 +77,6 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    /* Allows wrapping */
     margin-bottom: 10px;
     width: 95%;
     margin: 0 auto;
@@ -88,17 +84,13 @@ header {
 
 .logo {
     width: 25%;
-    /* Adjust based on your design */
     min-width: 100px;
-    /* Prevents the logo from becoming too small */
 
 }
 
 .company-info {
     flex-grow: 1;
-    /* Allows this section to grow and fill space */
     padding: 5px 5px 5px 5px;
-    /* Add some padding */
     text-align: center;
     max-width: 20%;
     margin-right: 15%;
@@ -117,7 +109,6 @@ header {
 /* Image Group Styles */
 .image-group {
     width: 35%;
-    /* Adjust based on your design */
     justify-content: flex-end;
     display: flex;
     gap: 55px;
@@ -125,21 +116,16 @@ header {
 
 .intro {
     width: 100%;
-    /* Full width to occupy its own line */
     text-align: center;
     padding-top: 10px;
-    /* Spacing above the text */
     padding-bottom: 30px;
 }
 
-/* Individual Images within Image Group */
 .iroda,
 .tech,
 .office {
     width: 100%;
-    /* Adjust based on your design */
     max-width: 170px;
-    /* Prevents the images from becoming too large */
     border-radius: 5px;
 }
 
@@ -195,15 +181,10 @@ nav li#current a:hover {
     backface-visibility: hidden;
 }
 
-/* Footer Styles */
 footer p {
     text-align: center;
 }
 
-/* Background Image Style */
-
-
-/* Title Styles */
 .titlemain {
     flex-basis: 100%;
     text-align: center;
@@ -214,15 +195,12 @@ hr {
     width: 99%
 }
 
-
-
 .plakatmain {
     transition: opacity 0.5s ease;
 }
 
 .plakatmain:hover {
     opacity: 0.5;
-    /* You can adjust this value to achieve the desired level of fade */
 }
 
 /*====ABOUT US====*/
@@ -251,7 +229,6 @@ hr {
 .text,
 .image_container {
     flex: 1;
-    /* Adjust the basis and grow/shrink factors as needed */
     margin: 10px;
 
 }
@@ -263,11 +240,8 @@ hr {
 
 footer {
     text-align: center;
-    /* Center-align footer text */
     font-size: 14pt;
-    /* Adjust font size for readability */
     padding: 5px;
-    /* Add padding around footer text */
     background-color: black;
 }
 
@@ -305,10 +279,7 @@ footer {
     padding: 10px 0;
     position: relative;
     background-color: transparent;
-    /* Needed for z-index to take effect */
     z-index: 2;
-    /* Higher z-index to ensure it's above the video */
-    /* Ensure header is above the video background */
 }
 
 .bodyall,
@@ -333,7 +304,6 @@ footer {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    /* This will make sure your video covers the entire area */
 }
 
 .content {
@@ -348,11 +318,8 @@ footer {
 
     display: inline-block;
     width: 50%;
-    /* Fixed width */
     max-width: 100%;
-    /* Ensures responsiveness */
     overflow: hidden;
-    /* Hide overflowed content */
     word-wrap: break-word;
 }
 
@@ -378,13 +345,10 @@ footer {
     }
 }
 
-
 .typewriter-box label {
     display: block;
     margin-top: 20px;
-    /* Increase the gap between the text and the label */
     color: aquamarine;
-    /* Set the label color */
 }
 
 footer.servicesfooter {
@@ -392,11 +356,9 @@ footer.servicesfooter {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
     color: white;
     padding: 20px;
     position: fixed;
-    /* or 'relative' depending on your layout */
     bottom: 0;
     width: 100%;
 }
@@ -405,7 +367,6 @@ footer.servicesfooter {
     color: white;
     text-decoration: none;
     margin-right: 15px;
-    /* Space between navigation links */
 }
 
 .footer-left a:hover {
@@ -414,7 +375,6 @@ footer.servicesfooter {
 
 .footer-right p {
     margin: 0;
-    /* Removes default paragraph margins */
 }
 
 .welcome_text {
@@ -451,12 +411,10 @@ footer.servicesfooter {
 #menu-bar {
     display: flex;
     opacity: 0;
-    /* Initially hidden */
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
     padding-left: 5px;
 
-    /* Space between icon and menu */
 }
 
 #menu-bar.menu-visible {
@@ -469,7 +427,6 @@ footer.servicesfooter {
     text-decoration: none;
     color: white;
     margin-right: 10px;
-    /* Space between links */
 }
 
 #menu-bar a:hover {
@@ -490,7 +447,6 @@ body.contactbody {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Enable scrolling if content overflows */
 
 }
 
@@ -503,7 +459,6 @@ body.contactbody {
 
 .content_contactus {
     padding-top: 60px;
-    /* Space at the top */
     padding-bottom: 90px;
     width: 100%;
     position: absolute;
@@ -523,11 +478,8 @@ body.contactbody {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: inline-block;
     width: 50%;
-    /* Fixed width */
     max-width: 95%;
-    /* Ensures responsiveness */
     overflow: hidden;
-    /* Hide overflowed content */
     word-wrap: break-word;
     margin: auto;
 
@@ -536,13 +488,11 @@ body.contactbody {
 .typewriter-box-contact form,
 .typewriter-box-contact form>* {
     width: 100%;
-    /* Ensure the form and its children take full width */
 }
 
 .typewriter-box-contact form input,
 .typewriter-box-contact form select,
 .typewriter-box-contact form button {
-    /* Add specific styles for form elements if necessary */
     margin-top: 10px;
     padding: 10px;
     background-color: transparent;
@@ -553,19 +503,13 @@ body.contactbody {
 
 .typewriter-box-contact form #budget {
     -webkit-appearance: none;
-    /* Override default appearance for WebKit browsers */
     appearance: none;
     width: 70%;
-    /* Adjust width as needed */
     height: 2px;
-    /* Adjust height */
     background: #ddd;
-    /* Background color of the slider */
     outline: none;
     opacity: 0.7;
-    /* Partial transparency */
     -webkit-transition: .2s;
-    /* Transition effect */
     transition: opacity .2s;
     margin-top: 10px
 }
@@ -573,71 +517,46 @@ body.contactbody {
 .typewriter-box-contact label {
     display: block;
     margin-top: 20px;
-    /* Increase the gap between the text and the label */
     color: aquamarine;
-    /* Set the label color */
 }
 
 .typewriter-box-contact input[type="email"],
 .typewriter-box-contact input[type="text"] {
     width: 50%;
-    /* Make input field wider */
     padding: 10px;
-    /* Add padding inside the input field */
     margin-top: 10px;
-    /* Add gap above the input field */
     background-color: transparent;
-    /* Make input field background transparent */
     border: 0.5px solid white;
-    /* Add border to the input field */
     color: white;
-    /* Set text color in the input field */
     border-radius: 5px;
-    /* Optionally round the corners of the input field */
 }
 
 .typewriter-box-contact button {
     display: flex;
     margin-top: 20px;
-    /* Increase the gap between the button and the input field */
     padding: 10px 10px;
-    /* Add padding inside the button */
     text-align: center;
     justify-content: center;
     background-color: transparent;
-    /* Make button background transparent */
     border: 0.5px solid white;
-    /* Add border to the button */
     color: white;
-    /* Set the button text color */
     border-radius: 15px;
-    /* Make the button corners rounded */
     cursor: pointer;
-    /* Change cursor to pointer when hovering over the button */
     font-size: 16px;
-    /* Increase font size for the button text */
 }
 
 .typewriter-box-contact button:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    /* Slight background color on hover for better UX */
 }
 
 .typewriter-box-contact select {
     width: 100%;
-    /* Match width of input fields */
     padding: 10px;
-    /* Padding for consistency */
     margin-top: 10px;
-    /* Space above the dropdown */
     background-color: transparent;
-    /* Transparent background */
     border: 0.5px solid white;
-    /* White border */
     color: white;
-    /* Text color */
     border-radius: 5px;
-    /* Rounded corners */
 }
 
 .contact-form {
@@ -645,7 +564,6 @@ body.contactbody {
 }
 
 #budget-form {
-    /* Styling similar to the contact form */
     display: inline-block;
     width: 50%;
     max-width: 100%;
@@ -656,59 +574,38 @@ body.contactbody {
 
 #budget {
     -webkit-appearance: none;
-    /* Override default appearance */
     appearance: none;
     width: 70%;
-    /* Full width of the container */
     height: 5px;
-    /* Height of the slider */
     background: #ddd;
-    /* Background color */
     outline: none;
-    /* Remove the outline */
     opacity: 0.7;
-    /* Partial transparency */
     -webkit-transition: .2s;
-    /* Smooth transitions */
     transition: opacity .2s;
     margin-top: 10px;
-    /* Top margin */
     border-radius: 5px;
-    /* Rounded corners */
 }
 
 #budget:hover {
     opacity: 1;
-    /* Fully opaque on hover */
 }
 
 #budget::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Override default appearance */
     appearance: none;
     width: 15px;
-    /* Width of the thumb */
     height: 15px;
-    /* Height of the thumb */
     background: #068FFF;
-    /* Background color of the thumb */
     cursor: pointer;
-    /* Cursor changes to pointer when hovered */
     border-radius: 50%;
-    /* Circular shape */
 }
 
 #budget::-moz-range-thumb {
     width: 25px;
-    /* Width of the thumb */
     height: 25px;
-    /* Height of the thumb */
     background: #068FFF;
-    /* Background color of the thumb */
     cursor: pointer;
-    /* Cursor changes to pointer when hovered */
     border-radius: 50%;
-    /* Circular shape */
 }
 
 #budget-value {
@@ -719,38 +616,25 @@ body.contactbody {
 
 .typewriter-box-contact input[type="date"] {
     width: 50%;
-    /* Adjust width as needed */
     padding: 10px;
-    /* Add padding inside the input field */
     margin-top: 10px;
-    /* Space above the input field */
     background-color: transparent;
-    /* Make input field background transparent */
     border: 0.5px solid white;
-    /* Add border to the input field */
     color: white;
-    /* Set text color in the input field */
     border-radius: 5px;
-    /* Optionally round the corners of the input field */
     -webkit-appearance: none;
-    /* Remove default styling for WebKit browsers */
     appearance: none;
 }
 
-/* Additional styles to target inner parts of the date picker in WebKit browsers */
 .typewriter-box-contact input[type="date"]::-webkit-inner-spin-button,
 .typewriter-box input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
-    /* Hide the default inner parts */
     -webkit-appearance: none;
 }
 
-/* Styles for focus state */
 .typewriter-box-contact input[type="date"]:focus {
     outline: none;
-    /* Remove the outline */
     border-color: #068FFF;
-    /* Highlight color for the border */
 }
 
 .typewriter-box-contact input[type="radio"] {
@@ -782,9 +666,7 @@ body.contactbody {
 .typewriter-box-contact input[type="checkbox"] {
     margin-right: 10px;
     width: 15px;
-    /* Adjust if necessary */
     height: 15px;
-    /* Adjust if necessary */
 }
 
 .typewriter-box-contact label {
@@ -825,14 +707,11 @@ body.contactbody {
 
     .content {
         padding-top: 200px;
-        /* More space at the top for smaller screens */
         padding-bottom: 200px;
-        /* More space at the bottom for smaller screens */
     }
 
     .typewriter-box-contact {
         width: 90%;
-        /* Adjust width for smaller screens */
         justify-content: center;
         align-items: center;
     }
@@ -841,14 +720,12 @@ body.contactbody {
     .typewriter-box-contact input[type="text"],
     .typewriter-box-contact select {
         width: 70%;
-        /* Full width for smaller inputs */
     }
 
     .typewriter-box-contact button {
         width: 50%;
         margin-top: 30px;
         margin-bottom: 30px;
-        /* Full width for button */
     }
 
     .footer-right {
@@ -868,103 +745,74 @@ body.contactbody {
 @media screen and (max-width: 599px) {
     .header-top {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: center;
-        /* Center-align items */
         padding: 5px 0;
-        /* Adjust padding */
         margin: 0 0
     }
 
     .left-section,
     .company-name {
-
-        /* Full width for better readability */
         text-align: center;
-        /* Center-align text */
         margin-bottom: 5px;
-        /* Add some space below each section */
     }
 
     .home-page,
     .company-name {
         font-size: 14pt;
-        /* Adjust font size for smaller screens */
     }
 
     .box {
         margin-top: 3px;
-        /* Adjust space above the box */
     }
 
-    /* Header Middle Section */
     .header-middle {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: center;
-        /* Center-align items */
         text-align: center;
         justify-content: center;
         padding: 5px 0;
-        /* Adjust padding */
     }
 
     .logo {
         width: 70%;
-        /* Adjust logo size */
         max-width: 120px;
-        /* Ensure logo doesn't get too large */
         margin-bottom: 10px;
-        /* Add space below the logo */
     }
 
     .company-info {
         padding: 0 5px;
-        /* Adjust padding */
         max-width: 100%;
-        /* Full width for company info */
         margin-bottom: 5px;
         align-items: center;
-        /* Center-align items */
         text-align: center;
         justify-content: center;
         margin-right: 0;
-        /* Add space below company info */
     }
 
     .company-title,
     .slogan {
         font-size: 16pt;
         align-items: center;
-        /* Center-align items */
         text-align: center;
         justify-content: center;
-        /* Adjust font size for readability */
     }
 
     .image-group {
         flex-direction: column;
-        /* Stack images vertically */
         justify-content: center;
-        /* Center images */
         margin-top: 10px;
-        /* Space above the image group */
     }
 
     .iroda,
     .tech,
     .office {
         max-width: 110px;
-        /* Adjust max-width for images */
         margin: 4px auto;
-        /* Center images with margin */
     }
 
     .intro {
         font-size: 12pt;
-        /* Adjust font size for intro text */
         padding: 0 5px;
-        /* Horizontal padding for the text */
     }
 
     nav ul {
@@ -980,7 +828,6 @@ body.contactbody {
     .events {
         flex-direction: column;
         align-items: center;
-        /* Center-align items */
         text-align: center;
         justify-content: center;
     }
@@ -1011,12 +858,10 @@ body.contactbody {
     }
 }
 
-/* Responsive Design */
 @media (min-width: 600px) {
     .header-top {
         display: flex;
         justify-content: space-between;
-        /* This will push the child elements to the edges */
         align-items: center;
         width: 95%;
         margin: 0 auto;
@@ -1025,7 +870,6 @@ body.contactbody {
 
     .company-name {
         margin-left: auto;
-        /* This pushes the .company-name to the right */
         font-size: 20pt;
         text-align: center;
         white-space: nowrap;
@@ -1034,116 +878,81 @@ body.contactbody {
 
     .left-section {
         width: 100%;
-        /* Full width for better readability */
         text-align: center;
         margin-bottom: 5px;
-        /* Add some space below each section */
     }
 
     .home-page {
         font-size: 16pt;
-        /* Adjust font size for smaller screens */
     }
 
     .box {
         margin-top: 5px;
-        /* Add some space above the box */
     }
 
     .header-middle {
         flex-direction: column;
-        /* Stack elements vertically */
         align-items: center;
-        /* Center-align items */
         text-align: center;
-        /* Center-align text for all child elements */
     }
 
     .logo {
         width: 80%;
-        /* Adjust logo size for smaller screens */
         max-width: 150px;
-        /* Ensure logo doesn't get too large */
         margin-bottom: 10px;
-        /* Add some space below the logo */
     }
 
     .company-info {
         max-width: 100%;
-        /* Allow company info to take full width */
         margin: 0;
-        /* Remove any margin */
         padding: 0 10px;
-        /* Add some horizontal padding */
     }
 
     .company-title,
     .slogan {
         font-size: 18pt;
-        /* Adjust font size for readability */
     }
 
     .image-group {
         flex-direction: row;
-        /* Keep images in a row if there's enough space */
         justify-content: space-around;
-        /* Space out images evenly */
         flex-wrap: wrap;
-        /* Allow images to wrap to next line if needed */
         width: 100%;
-        /* Full width to accommodate images */
         margin-top: 10px;
-        /* Space above the image group */
     }
 
     .iroda,
     .tech,
     .office {
         max-width: 120px;
-        /* Adjust the max-width for images */
         margin: 5px;
-        /* Space around each image */
     }
 
     .intro {
         margin-top: 10px;
-        /* Space above the intro text */
         padding: 0 10px;
-        /* Horizontal padding for the text */
         font-size: 14pt;
-        /* Adjust font size for intro text */
     }
 
     .containermain {
         padding: 10px;
-        /* Adjust padding for smaller screens */
         align-items: center;
-        /* Center-align the content */
     }
 
-    /* Styles for the Events Section */
     .events {
         flex-direction: column;
-        /* Stack the event images vertically */
         align-items: center;
-        /* Center-align the images */
     }
 
     .plakatmain {
         width: 100%;
-        /* Full width for images */
         margin: 10px 0;
-        /* Adjust margin around images */
     }
 
-    /* Styles for Footer */
     footer p {
         text-align: center;
-        /* Center-align footer text */
         font-size: 14pt;
-        /* Adjust font size for readability */
         padding: 5px;
-        /* Add padding around footer text */
     }
 
 
@@ -1156,14 +965,11 @@ body.contactbody {
     .welcome_text,
     .services_text {
         width: 90%;
-        /* Adjust width for smaller screens */
         margin: 0 auto;
-        /* Center align */
     }
 
     #typewriter-text-services {
         font-size: 40px;
-        /* Adjust font size for smaller screens */
     }
 
     .menu-container {
@@ -1173,21 +979,16 @@ body.contactbody {
 
     #menu-icon {
         font-size: 25px;
-        /* Adjust icon size */
     }
 
     #menu-bar {
         flex-wrap: wrap;
-        /* This will allow menu items to wrap into multiple rows */
         justify-content: flex-start;
-        /* Aligns items to the start of the container */
     }
 
     #menu-bar a {
         display: block;
-        /* Makes each link take up the full width of its container */
         margin-bottom: 10px;
-        /* Adds some space below each link */
     }
 
     .container_contactus {
@@ -1209,9 +1010,6 @@ body.contactbody {
 }
 
 @media (min-width: 768px) {
-
-
-
     .company-name {
         text-align: right;
         white-space: nowrap;
@@ -1219,7 +1017,6 @@ body.contactbody {
 
     .left-section {
         text-align: left;
-        /* Reset text alignment */
     }
 
     .header-middle {
@@ -1227,26 +1024,20 @@ body.contactbody {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        /* Allows elements to wrap to the next line */
         width: 95%;
         margin: 0 auto;
     }
 
     .logo {
         flex: 1;
-        /* Adjust the flex basis as needed */
-
-        /* Adjust size as needed */
     }
 
     .company-info {
         flex: 2;
-        /* Adjust the flex basis as needed */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* Center the content */
         text-align: center;
         margin-bottom: 10px;
     }
@@ -1254,29 +1045,22 @@ body.contactbody {
     .image-group {
         display: flex;
         justify-content: space-between;
-        /* Adjust this to space-around or center based on your design */
         align-items: center;
         flex-wrap: nowrap;
-        /* Prevent the images from wrapping */
         width: 80%;
         gap: 0;
-        /* Adjust the width as needed to fit all images in one row */
     }
 
     .iroda,
     .tech,
     .office {
         flex: 0 0 auto;
-        /* Do not grow or shrink, and base size on content */
         max-width: 170px;
-        /* Adjust max-width to ensure they fit in one row */
         margin: 0 10px;
-        /* Add margin for spacing between images */
     }
 
     .intro {
         width: 100%;
-        /* Full width */
         text-align: center;
         padding-top: 10px;
         padding-bottom: 30px;
@@ -1284,14 +1068,12 @@ body.contactbody {
 
     nav ul {
         flex-direction: row;
-        /* Reset to horizontal nav */
         justify-content: center;
         padding: 0;
     }
 
     nav li {
         margin-right: 10px;
-        /* Reset margin */
     }
 
     .events {
