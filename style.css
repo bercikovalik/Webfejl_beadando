@@ -214,6 +214,17 @@ hr {
     width: 99%
 }
 
+
+
+.plakatmain {
+    transition: opacity 0.5s ease;
+}
+
+.plakatmain:hover {
+    opacity: 0.5;
+    /* You can adjust this value to achieve the desired level of fade */
+}
+
 /*====ABOUT US====*/
 
 .containermain #about_us {
@@ -260,6 +271,18 @@ footer {
     background-color: black;
 }
 
+.galleria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    margin: auto;
+}
+
+.galleria img {
+    max-width: 100%;
+    height: auto;
+}
 
 /*====SERVICES====*/
 
@@ -546,6 +569,7 @@ body.contactbody {
     transition: opacity .2s;
     margin-top: 10px
 }
+
 .typewriter-box-contact label {
     display: block;
     margin-top: 20px;
@@ -619,6 +643,7 @@ body.contactbody {
 .contact-form {
     display: none;
 }
+
 #budget-form {
     /* Styling similar to the contact form */
     display: inline-block;
@@ -764,4 +789,517 @@ body.contactbody {
 
 .typewriter-box-contact label {
     color: aquamarine;
+}
+
+
+
+/*====MEDIA QUERIES====*/
+
+@media (min-width: 300px) {}
+
+@media (max-width: 480px) {
+    #typewriter-text-services {
+        font-size: 40px;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .typewriter-box {
+        text-align: center;
+
+    }
+
+    .header_top_services,
+    .footer-left,
+    .footer-right {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right,
+    .footer-left a {
+        margin-top: 10px;
+    }
+
+    .content {
+        padding-top: 200px;
+        /* More space at the top for smaller screens */
+        padding-bottom: 200px;
+        /* More space at the bottom for smaller screens */
+    }
+
+    .typewriter-box-contact {
+        width: 90%;
+        /* Adjust width for smaller screens */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .typewriter-box-contact input[type="email"],
+    .typewriter-box-contact input[type="text"],
+    .typewriter-box-contact select {
+        width: 70%;
+        /* Full width for smaller inputs */
+    }
+
+    .typewriter-box-contact button {
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* Full width for button */
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .header_top_services,
+    .footer-left,
+    .footer-right {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width: 599px) {
+    .header-top {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center-align items */
+        padding: 5px 0;
+        /* Adjust padding */
+        margin: 0 0
+    }
+
+    .left-section,
+    .company-name {
+
+        /* Full width for better readability */
+        text-align: center;
+        /* Center-align text */
+        margin-bottom: 5px;
+        /* Add some space below each section */
+    }
+
+    .home-page,
+    .company-name {
+        font-size: 14pt;
+        /* Adjust font size for smaller screens */
+    }
+
+    .box {
+        margin-top: 3px;
+        /* Adjust space above the box */
+    }
+
+    /* Header Middle Section */
+    .header-middle {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center-align items */
+        text-align: center;
+        justify-content: center;
+        padding: 5px 0;
+        /* Adjust padding */
+    }
+
+    .logo {
+        width: 70%;
+        /* Adjust logo size */
+        max-width: 120px;
+        /* Ensure logo doesn't get too large */
+        margin-bottom: 10px;
+        /* Add space below the logo */
+    }
+
+    .company-info {
+        padding: 0 5px;
+        /* Adjust padding */
+        max-width: 100%;
+        /* Full width for company info */
+        margin-bottom: 5px;
+        align-items: center;
+        /* Center-align items */
+        text-align: center;
+        justify-content: center;
+        margin-right: 0;
+        /* Add space below company info */
+    }
+
+    .company-title,
+    .slogan {
+        font-size: 16pt;
+        align-items: center;
+        /* Center-align items */
+        text-align: center;
+        justify-content: center;
+        /* Adjust font size for readability */
+    }
+
+    .image-group {
+        flex-direction: column;
+        /* Stack images vertically */
+        justify-content: center;
+        /* Center images */
+        margin-top: 10px;
+        /* Space above the image group */
+    }
+
+    .iroda,
+    .tech,
+    .office {
+        max-width: 110px;
+        /* Adjust max-width for images */
+        margin: 4px auto;
+        /* Center images with margin */
+    }
+
+    .intro {
+        font-size: 12pt;
+        /* Adjust font size for intro text */
+        padding: 0 5px;
+        /* Horizontal padding for the text */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    nav li {
+        margin-bottom: 5px;
+    }
+
+    .events {
+        flex-direction: column;
+        align-items: center;
+        /* Center-align items */
+        text-align: center;
+        justify-content: center;
+    }
+
+    .plakatmain {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .content_flex#item1 {
+        flex-direction: column;
+    }
+
+    .content_flex#item2 {
+        flex-direction: column-reverse;
+    }
+
+    .content_flex#item3 {
+        flex-direction: column;
+    }
+
+    .content_flex#item4 {
+        flex-direction: column-reverse;
+    }
+
+    .content_flex#item5 {
+        flex-direction: column;
+    }
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        /* This will push the child elements to the edges */
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    .company-name {
+        margin-left: auto;
+        /* This pushes the .company-name to the right */
+        font-size: 20pt;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+    .left-section {
+        width: 100%;
+        /* Full width for better readability */
+        text-align: center;
+        margin-bottom: 5px;
+        /* Add some space below each section */
+    }
+
+    .home-page {
+        font-size: 16pt;
+        /* Adjust font size for smaller screens */
+    }
+
+    .box {
+        margin-top: 5px;
+        /* Add some space above the box */
+    }
+
+    .header-middle {
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center-align items */
+        text-align: center;
+        /* Center-align text for all child elements */
+    }
+
+    .logo {
+        width: 80%;
+        /* Adjust logo size for smaller screens */
+        max-width: 150px;
+        /* Ensure logo doesn't get too large */
+        margin-bottom: 10px;
+        /* Add some space below the logo */
+    }
+
+    .company-info {
+        max-width: 100%;
+        /* Allow company info to take full width */
+        margin: 0;
+        /* Remove any margin */
+        padding: 0 10px;
+        /* Add some horizontal padding */
+    }
+
+    .company-title,
+    .slogan {
+        font-size: 18pt;
+        /* Adjust font size for readability */
+    }
+
+    .image-group {
+        flex-direction: row;
+        /* Keep images in a row if there's enough space */
+        justify-content: space-around;
+        /* Space out images evenly */
+        flex-wrap: wrap;
+        /* Allow images to wrap to next line if needed */
+        width: 100%;
+        /* Full width to accommodate images */
+        margin-top: 10px;
+        /* Space above the image group */
+    }
+
+    .iroda,
+    .tech,
+    .office {
+        max-width: 120px;
+        /* Adjust the max-width for images */
+        margin: 5px;
+        /* Space around each image */
+    }
+
+    .intro {
+        margin-top: 10px;
+        /* Space above the intro text */
+        padding: 0 10px;
+        /* Horizontal padding for the text */
+        font-size: 14pt;
+        /* Adjust font size for intro text */
+    }
+
+    .containermain {
+        padding: 10px;
+        /* Adjust padding for smaller screens */
+        align-items: center;
+        /* Center-align the content */
+    }
+
+    /* Styles for the Events Section */
+    .events {
+        flex-direction: column;
+        /* Stack the event images vertically */
+        align-items: center;
+        /* Center-align the images */
+    }
+
+    .plakatmain {
+        width: 100%;
+        /* Full width for images */
+        margin: 10px 0;
+        /* Adjust margin around images */
+    }
+
+    /* Styles for Footer */
+    footer p {
+        text-align: center;
+        /* Center-align footer text */
+        font-size: 14pt;
+        /* Adjust font size for readability */
+        padding: 5px;
+        /* Add padding around footer text */
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+
+    .typewriter-box,
+    .welcome_text,
+    .services_text {
+        width: 90%;
+        /* Adjust width for smaller screens */
+        margin: 0 auto;
+        /* Center align */
+    }
+
+    #typewriter-text-services {
+        font-size: 40px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu-icon {
+        font-size: 25px;
+        /* Adjust icon size */
+    }
+
+    #menu-bar {
+        flex-wrap: wrap;
+        /* This will allow menu items to wrap into multiple rows */
+        justify-content: flex-start;
+        /* Aligns items to the start of the container */
+    }
+
+    #menu-bar a {
+        display: block;
+        /* Makes each link take up the full width of its container */
+        margin-bottom: 10px;
+        /* Adds some space below each link */
+    }
+
+    .container_contactus {
+        margin-top: 10%;
+    }
+
+    .footer-right {
+        display: none;
+    }
+
+    .typewriter-box-contact {
+        width: 80%;
+
+    }
+
+    .typewriter-box-contact button {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+
+
+
+    .company-name {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .left-section {
+        text-align: left;
+        /* Reset text alignment */
+    }
+
+    .header-middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Allows elements to wrap to the next line */
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        flex: 1;
+        /* Adjust the flex basis as needed */
+
+        /* Adjust size as needed */
+    }
+
+    .company-info {
+        flex: 2;
+        /* Adjust the flex basis as needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Center the content */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .image-group {
+        display: flex;
+        justify-content: space-between;
+        /* Adjust this to space-around or center based on your design */
+        align-items: center;
+        flex-wrap: nowrap;
+        /* Prevent the images from wrapping */
+        width: 80%;
+        gap: 0;
+        /* Adjust the width as needed to fit all images in one row */
+    }
+
+    .iroda,
+    .tech,
+    .office {
+        flex: 0 0 auto;
+        /* Do not grow or shrink, and base size on content */
+        max-width: 170px;
+        /* Adjust max-width to ensure they fit in one row */
+        margin: 0 10px;
+        /* Add margin for spacing between images */
+    }
+
+    .intro {
+        width: 100%;
+        /* Full width */
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        /* Reset to horizontal nav */
+        justify-content: center;
+        padding: 0;
+    }
+
+    nav li {
+        margin-right: 10px;
+        /* Reset margin */
+    }
+
+    .events {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 95%;
+        gap: 30px;
+    }
+
 }

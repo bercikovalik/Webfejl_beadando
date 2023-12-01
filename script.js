@@ -51,7 +51,7 @@ function showNextField(currentFieldId, nextFieldId) {
     const currentFieldContainer = currentInput.parentElement;
     const nextFieldContainer = document.getElementById(nextFieldId + '-field');
 
-    // Hide the input and continue button
+    //input és continue button elrejtése
     currentInput.style.display = 'none';
     const continueButton = currentFieldContainer.querySelector('button');
     if (continueButton) continueButton.style.display = 'none';
@@ -64,7 +64,7 @@ function showNextField(currentFieldId, nextFieldId) {
         currentFieldContainer.appendChild(displaySpan);
     }
 
-    // Show the next field
+    // Következő input mutatása
     if (nextFieldContainer) {
         nextFieldContainer.style.display = 'block';
     }
