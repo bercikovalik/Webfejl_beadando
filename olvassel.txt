@@ -19,6 +19,8 @@ Js:
 
 6) Ez a kód hasonlóan a 4. kódhoz, a radio button objektum válaszától eltérően jelenít meg, vagy nem, egy új mezőt.
 
+!!! A sok breakpointos problémát megbeszéltem veled, vannak olyan breakpointok ahol nem törik semmi egyes oldalakon, azonban más oldalakon igen. !!! 
+
 A style.css fájlban a Contact Us oldal formázásánál, a dátum választót és a slider input mezőt ChatGPT segítségével formáztam.
 
 A weboldal szövege: ChatGPT
