@@ -40,30 +40,28 @@ document.addEventListener('DOMContentLoaded', function () {
 // 2 //
 
 function toggleMenu() {
-    var menuBar = document.getElementById("menu-bar");
+    const menuBar = document.getElementById("menu-bar");
     menuBar.classList.toggle("menu-visible");
 }
 
 // 3 //
 
 function showNextField(currentFieldId, nextFieldId) {
-    var currentFieldContainer = document.getElementById(currentFieldId);
-    var nextFieldContainer = document.getElementById(nextFieldId);
+    const currentFieldContainer = document.getElementById(currentFieldId);
+    const nextFieldContainer = document.getElementById(nextFieldId);
 
-    // Hide the current continue button and remove the border of the input field
     if (currentFieldContainer) {
-        var continueButton = currentFieldContainer.querySelector('button');
+        const continueButton = currentFieldContainer.querySelector('button');
         if (continueButton) {
             continueButton.style.display = 'none';
         }
 
-        var inputField = currentFieldContainer.querySelector('input');
+        const inputField = currentFieldContainer.querySelector('input');
         if (inputField) {
-            inputField.style.border = 'none'; // Remove the border
+            inputField.style.border = 'none';
         }
     }
 
-    // Show the next field
     if (nextFieldContainer) {
         nextFieldContainer.style.display = 'block';
     }
@@ -81,14 +79,19 @@ function checkOtherService(value) {
 
 // 5 //
 
-function updateBudgetValue(value) {
-    document.getElementById('budget-value').textContent = value;
-}
+
+const budgetSlider = document.getElementById('budget-slider');
+const sliderValue = document.getElementById('slider-value');
+
+budgetSlider.addEventListener('input', () => {
+  sliderValue.textContent = budgetSlider.value;
+});
+
 
 // 6 //
 
 function togglePhoneInput(show) {
-    var phoneNumberInput = document.getElementById("phone_number-input");
+    const phoneNumberInput = document.getElementById("phone_number-input");
     if (show) {
         phoneNumberInput.style.display = "block";
     } else {

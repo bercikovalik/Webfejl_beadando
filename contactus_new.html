@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
     <style>
+       
     </style>
 </head>
 
@@ -65,21 +66,19 @@
                         <label for="other">Please Describe Shortly:</label>
                         <input type="text" id="other" name="other" placeholder="Describe Service">
                     </div>
-                    <button type="button" onclick="showNextField('service', 'budget')">Continue</button>
-                </div>
-
-                <div id="budget" style="display:none;">
-                    <label for="budget">Set Your Maximum Budget ($):</label>
-                    <input type="range" id="budget" name="budget" min="0" max="100000" value="50000" step="500"
-                        oninput="updateBudgetValue(this.value)">
-                    <span id="budget-value">50000</span>
-                    <button type="button" onclick="showNextField('budget', 'start_date')">Continue</button>
+                    <button type="button" onclick="showNextField('service', 'start_date')">Continue</button>
                 </div>
 
                 <div id="start_date" style="display:none;">
                     <label for="start_date">Choose Start Date:</label>
                     <input type="date" id="start_date" name="start_date">
-                    <button type="button" onclick="showNextField('start_date', 'contact_method')">Continue</button>
+                    <button type="button" onclick="showNextField('start_date', 'budget')">Continue</button>
+                </div>
+                <div id="budget" style="display: none;">
+                    <label for="budget">Choose A Max Budget:</label>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="budget-slider" name="budget">
+                    <div id="budget-value">Budget: $<span id="slider-value">50</span>k</div>
+                    <button type="button" onclick="showNextField('budget', 'contact_method')">Continue</button>
                 </div>
 
                 <div id="contact_method" style="display:none;">
@@ -94,7 +93,6 @@
                     </div>
                     <button type="button" onclick="showNextField('contact_method', 'checkbox')">Continue</button>
                 </div>
-
                 <div id="checkbox" style="display:none;">
                     <div class="checkbox-option">
                         <input type="checkbox" id="subscribe-newsletter" name="subscribe-newsletter">
@@ -128,17 +126,18 @@
     <script src="script.js"></script>
     <script>
         $(document).ready(function () {
-           
+
             $.validator.addMethod("dateMin", function (value, element) {
-                var inputDate = new Date(value);
-                var today = new Date();
-                today.setDate(today.getDate() + 7); 
+                const inputDate = new Date(value);
+                const today = new Date();
+                today.setDate(today.getDate() + 7);
                 return this.optional(element) || inputDate >= today;
             }, "The date must be at least one week from today.");
 
             $.validator.addMethod("phoneNumber", function (value, element) {
                 return this.optional(element) || /^\+\d+$/.test(value);
             }, "Please enter a valid phone number starting with + followed by digits");
+
 
             $("#myform").validate({
                 rules: {
@@ -175,12 +174,13 @@
                         required: "Please provide a phone number",
                         phoneNumber: "Please enter a valid phone number starting with + followed by digits"
                     }
+
                 },
                 errorPlacement: function (error, element) {
                     if (element.attr("name") == "contact_method") {
-                        error.insertAfter("#contact_method-field"); 
+                        error.insertAfter("#contact_method-field");
                     } else {
-                        error.insertAfter(element); 
+                        error.insertAfter(element);
                     }
                 },
                 submitHandler: function (form) {

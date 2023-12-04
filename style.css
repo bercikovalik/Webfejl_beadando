@@ -501,18 +501,6 @@ body.contactbody {
     border-radius: 5px;
 }
 
-.typewriter-box-contact form #budget {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 70%;
-    height: 2px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-    margin-top: 10px
-}
 
 .typewriter-box-contact label {
     display: block;
@@ -563,55 +551,23 @@ body.contactbody {
     display: none;
 }
 
-#budget-form {
-    display: inline-block;
-    width: 50%;
-    max-width: 100%;
-    overflow: hidden;
-    word-wrap: break-word;
-    margin-top: 20px;
-}
-
-#budget {
-    -webkit-appearance: none;
-    appearance: none;
+.slider {
     width: 70%;
-    height: 5px;
-    background: #ddd;
+    height: 2px;
+    border-radius: 0.5px;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-    margin-top: 10px;
-    border-radius: 5px;
 }
 
-#budget:hover {
+.slider:hover {
     opacity: 1;
 }
 
-#budget::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #068FFF;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#budget::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #068FFF;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
 #budget-value {
-    color: aquamarine;
-    display: inline-block;
-    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .typewriter-box-contact input[type="date"] {
