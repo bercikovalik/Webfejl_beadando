@@ -47,24 +47,23 @@ function toggleMenu() {
 // 3 //
 
 function showNextField(currentFieldId, nextFieldId) {
-    const currentInput = document.getElementById(currentFieldId);
-    const currentFieldContainer = currentInput.parentElement;
-    const nextFieldContainer = document.getElementById(nextFieldId + '-field');
+    var currentFieldContainer = document.getElementById(currentFieldId);
+    var nextFieldContainer = document.getElementById(nextFieldId);
 
-    //input és continue button elrejtése
-    currentInput.style.display = 'none';
-    const continueButton = currentFieldContainer.querySelector('button');
-    if (continueButton) continueButton.style.display = 'none';
+    // Hide the current continue button and remove the border of the input field
+    if (currentFieldContainer) {
+        var continueButton = currentFieldContainer.querySelector('button');
+        if (continueButton) {
+            continueButton.style.display = 'none';
+        }
 
-    // Append a span with the selected value for user visibility (only for non-hidden fields)
-    if (currentInput.type !== 'hidden' && currentInput.type !== 'checkbox' && currentInput.type !== 'radio' && currentInput.type !== 'range') {
-        const displayText = currentInput.value;
-        const displaySpan = document.createElement('span');
-        displaySpan.textContent = displayText;
-        currentFieldContainer.appendChild(displaySpan);
+        var inputField = currentFieldContainer.querySelector('input');
+        if (inputField) {
+            inputField.style.border = 'none'; // Remove the border
+        }
     }
 
-    // Következő input mutatása
+    // Show the next field
     if (nextFieldContainer) {
         nextFieldContainer.style.display = 'block';
     }
@@ -89,7 +88,7 @@ function updateBudgetValue(value) {
 // 6 //
 
 function togglePhoneInput(show) {
-    var phoneNumberInput = document.getElementById("phone-number-input");
+    var phoneNumberInput = document.getElementById("phone_number-input");
     if (show) {
         phoneNumberInput.style.display = "block";
     } else {
