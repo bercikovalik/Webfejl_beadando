@@ -3,6 +3,7 @@
 Készítő: Kovalik-Deák Bercel
 
 Url: https://bercikovalik.github.io/Webfejl_beadando/index.html
+Github link: https://github.com/bercikovalik/Webfejl_beadando
 
 Leírás: Az oldal egy kitalált cég, a Tech Vibe Solutions, egy informatikai szolgáltatásokat kínáló cég oldala. Az oldal tartalmazza a cég bemutatkozását, a kínált szolgáltatások leírását, és a kapcsolatba lépést lehetővé tevő űrlap oldalt. 
 
@@ -25,7 +26,9 @@ Js:
 
 !!! A sok breakpointos problémát megbeszéltem veled, vannak olyan breakpointok ahol nem törik semmi egyes oldalakon, azonban más oldalakon igen. !!! 
 
-A style.css fájlban a Contact Us oldal formázásánál, a dátum választót és a slider input mezőt ChatGPT segítségével formáztam.
+Az index.html oldalon a posterekre kattintva direkt nem dob sehova a link, az reális esetben egy facebook eseményre mutatna.
+
+A style.css fájlban a Contact Us oldal formázásánál, a dátum választót ChatGPT segítségével formáztam.
 
 A weboldal szövege: ChatGPT
 
