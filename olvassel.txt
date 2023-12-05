@@ -24,11 +24,11 @@ Js:
 
 8) Ez a kód az űrlap validációnál ellenőrzi, hogy a telefonszámnál megadott karakterlánc "+" karakterrel kezdődik-e, és csak számot tartalmaz-e.
 
-!!! A sok breakpointos problémát megbeszéltem veled, vannak olyan breakpointok ahol nem törik semmi egyes oldalakon, azonban más oldalakon igen. !!! 
+!!! A sok breakpointos problémát megbeszéltem veled, vannak olyan breakpointok ahol nem törik semmi egyes oldalakon, azonban más oldalakon igen.
 
-Az index.html oldalon a posterekre kattintva direkt nem dob sehova a link, az reális esetben egy facebook eseményre mutatna.
+!!! Az index.html oldalon a posterekre kattintva direkt nem dob sehova a link, az reális esetben egy facebook eseményre mutatna.
 
-A style.css fájlban a Contact Us oldal formázásánál, a dátum választót ChatGPT segítségével formáztam.
+!!! A style.css fájlban a Contact Us oldal formázásánál, a dátum választót ChatGPT segítségével formáztam.
 
 A weboldal szövege: ChatGPT
 
