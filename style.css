@@ -59,8 +59,8 @@ header {
     height: 35px;
     color: white;
     text-align: center;
-    line-height: 35px;
-    font-size: 20pt;
+    line-height: 32px;
+    font-size: 17pt;
     border: 1.5px solid #068FFF;
     border-radius: 5px;
 }
