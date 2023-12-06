@@ -125,16 +125,16 @@
     <script>
         $(document).ready(function () {
             /* 7 */
-            $.validator.addMethod("dateMin", function (value, element) {
+            $.validator.addMethod("dateMin", function (value, element) {  /*Value: A mező értéke amit validálok, Element: A DOM elem amihez rendeljük a szabályt*/
                 const inputDate = new Date(value);
                 const today = new Date();
-                today.setDate(today.getDate() + 7);
-                return this.optional(element) || inputDate >= today;
+                today.setDate(today.getDate() + 7); /*Módosítja today dátumát, megadva az egy héttel későbbi dátumot*/
+                return this.optional(element) || inputDate >= today; /*Optional: kötelező-e kitölteni. Kötelező, úgyhogy ellenőzi hogy az input későbbi-e mint a today értéke*/
             }, "The date must be at least one week from today.");
 
             /* 8 */
             $.validator.addMethod("phoneNumber", function (value, element) {
-                return this.optional(element) || /^\+\d+$/.test(value);
+                return this.optional(element) || /^\+\d+$/.test(value); /*/^ az elején, \+ plusszal kezdődik, \d+ egy vagy több számjegy következik, $/ A szöveg vége, mintával megegyezően*/
             }, "Please enter a valid phone number starting with + followed by digits");
 
 

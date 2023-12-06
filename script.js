@@ -1,5 +1,5 @@
 // 1 services //
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { 
     const typewriterText = "OUR SERVICES";
     const typewriterElement = document.getElementById('typewriter-text-services');
     let i = 0;
@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function typeWriter() {
         if (i < typewriterText.length) {
             typewriterElement.innerHTML = typewriterText.substring(0, i + 1) + '<span class="cursor">|</span>';
-            i++;
-            setTimeout(typeWriter, 100);
+            i++; setTimeout(typeWriter, 100); /*Növeli az i változót, majd 100 milliszekundum után újra meghívja a typeWriter függvényt*/
         } else {
-            typewriterElement.innerHTML = typewriterText + '<span class="cursor">|</span>';
+            typewriterElement.innerHTML = typewriterText + '<span class="cursor">|</span>'; /* Ha már teljes a szöveg, megtartja a szöveget és a kuzort*/
         }
     }
 
@@ -26,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function typeWriter() {
         if (i < typewriterText.length) {
             typewriterElement.innerHTML = typewriterText.substring(0, i + 1) + '<span class="cursor">|</span>';
-            i++;
-            setTimeout(typeWriter, 100);
+            i++; setTimeout(typeWriter, 100);
         } else {
             typewriterElement.innerHTML = typewriterText + '<span class="cursor">|</span>';
             contactFormElement.style.display = 'block';
@@ -50,20 +48,20 @@ function showNextField(currentFieldId, nextFieldId) {
     const currentFieldContainer = document.getElementById(currentFieldId);
     const nextFieldContainer = document.getElementById(nextFieldId);
 
-    if (currentFieldContainer) {
-        const continueButton = currentFieldContainer.querySelector('button');
+    if (currentFieldContainer) { /* Létezik-e a mező*/
+        const continueButton = currentFieldContainer.querySelector('button'); /*Megkeresi a folytatás gombot */
         if (continueButton) {
-            continueButton.style.display = 'none';
+            continueButton.style.display = 'none'; /*Ha van gomb, elrejti. */
         }
 
-        const inputField = currentFieldContainer.querySelector('input');
+        const inputField = currentFieldContainer.querySelector('input'); /*Megkeresi az input mezőt */
         if (inputField) {
-            inputField.style.border = 'none';
+            inputField.style.border = 'none'; /* Ha van, eltünteti a borderjét */
         }
     }
 
-    if (nextFieldContainer) {
-        nextFieldContainer.style.display = 'block';
+    if (nextFieldContainer) { 
+        nextFieldContainer.style.display = 'block'; /*Ha van következő input mező, megjeleníti azt. */
     }
 }
 
